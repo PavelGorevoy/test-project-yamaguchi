@@ -1,0 +1,17 @@
+@mixin ubuntu-fonts {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 170%;
+  color: #181818;
+}
+
+@mixin montserrat-fonts {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 170%;
+  color: #FFFFFF;
+}

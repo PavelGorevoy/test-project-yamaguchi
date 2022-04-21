@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ubuntu.woff2") format("woff2"),
+    url("../fonts/ubuntu.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/montserrat.woff2") format("woff2"),
+    url("../fonts/montserrat.woff") format("woff");
+}

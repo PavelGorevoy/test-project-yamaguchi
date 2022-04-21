@@ -1,0 +1,59 @@
+.table {
+  background-color: $background-table;
+}
+
+.table__box {
+  @include ubuntu-fonts;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1733px;
+  max-height: 900px;
+}
+
+.table__container {
+  padding-top: 270px;
+}
+
+.table__image-container {
+  --table-translate-y: 0px;
+
+  &--bottom {
+    transform: translateY(var(--table-translate-y));
+    transition: transform 1s cubic-bezier(0.33, 1, 0.68, 1);
+    margin-bottom: -160px;
+  }
+
+}
+
+.table__title {
+  display: block;
+  width: 500px;
+  font-size: 62px;
+  line-height: 100%;
+  color: $title-table;
+}
+
+.table__text {
+  p{
+    width: 500px;
+  }
+}
+
+.table__button-box {
+  display: flex;
+  justify-content: space-between;
+  width: 474px;
+}
+
+.table__button {
+  width: 200px;
+  height: 200px;
+  border:none;
+  border-radius: 50%;
+  font-size: 40px;
+  line-height: 170%;
+  cursor: pointer;
+  background-color: $button-color;
+}
