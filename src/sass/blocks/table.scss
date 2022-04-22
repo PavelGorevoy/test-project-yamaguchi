@@ -65,6 +65,7 @@
     font-weight: 700;
     font-size: 28px;
     order: 0;
+    padding-left: 0;
   }
 }
 
@@ -76,6 +77,8 @@
 
     @media (max-width: $mobile-width-only) {
       order: 1;
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 
@@ -92,6 +95,7 @@
 
     @media (max-width: $mobile-width-only) {
       width: 296px;
+      padding-left: 0;
     }
   }
 

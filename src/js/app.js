@@ -20,9 +20,17 @@ class TableAnimation {
       return;
     }
 
-    this.isAnimation = true;
-    this.tableTranslateY = this.tableTranslateY + this.tableTranslateStep;
-    this.tableTop.style.setProperty('--table-translate-y', `-${this.tableTranslateY}px` );
+    if (window.innerWidth <= 600 ) {
+
+      this.isAnimation = true;
+      this.tableTranslateY = this.tableTranslateY + this.tableTranslateStepMob;
+      this.tableTop.style.setProperty('--table-translate-y', `-${this.tableTranslateY}px` );
+    }
+
+    else {
+      this.isAnimation = true;
+      this.tableTranslateY = this.tableTranslateY + this.tableTranslateStep;
+      this.tableTop.style.setProperty('--table-translate-y', `-${this.tableTranslateY}px` );}
   }
 
   onButtonDownClick = () => {
@@ -30,9 +38,18 @@ class TableAnimation {
       return;
     }
 
-    this.isAnimation = true;
-    this.tableTranslateY = this.tableTranslateY - this.tableTranslateStep;
-    this.tableTop.style.setProperty('--table-translate-y', `-${this.tableTranslateY}px` );
+    if (window.innerWidth <= 600 ) {
+
+      this.isAnimation = true;
+      this.tableTranslateY = this.tableTranslateY - this.tableTranslateStepMob;
+      this.tableTop.style.setProperty('--table-translate-y', `-${this.tableTranslateY}px` );
+    }
+
+    else {
+      this.isAnimation = true;
+      this.tableTranslateY = this.tableTranslateY - this.tableTranslateStep;
+      this.tableTop.style.setProperty('--table-translate-y', `-${this.tableTranslateY}px` );
+    }
   }
 
   onIntersection = (entries) => {
@@ -56,7 +73,9 @@ class TableAnimation {
   init() {
     this.tableTranslateY = 0;
     this.tableTranslateStep = 25;
+    this.tableTranslateStepMob = 5;
     this.tableTranslateMax = 100;
+    this.tableTranslateMaxMob = 10;
     this.isAnimation = false;
     this.tableSection = document.querySelector('.js-table');
     this.tableTop = document.querySelector ('.js-table-top');
