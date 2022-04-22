@@ -6,14 +6,31 @@
   @include ubuntu-fonts;
   display: flex;
   flex-direction: column;
+  align-content: center;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1733px;
+  margin: 0 auto;
+  max-width: 1920px;
+  height: 100vh;
   max-height: 900px;
+
+  @media (max-width: $mobile-width-only) {
+    display: grid;
+    max-width: 400px;
+    max-height: 2000px;
+    height: auto;
+    min-height: 998px;
+  }
 }
 
-.table__container {
-  padding-top: 270px;
+.table__img {
+  position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    margin: 0 auto;
+    height: 267px;
+    order: 2;
+  }
 }
 
 .table__image-container {
@@ -23,28 +40,86 @@
     transform: translateY(var(--table-translate-y));
     transition: transform 1s cubic-bezier(0.33, 1, 0.68, 1);
     margin-bottom: -160px;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: -50px;
+    }
   }
 
+  :last-child {
+    @media (max-width: $mobile-width-only) {
+    }
+  }
 }
 
 .table__title {
   display: block;
+  padding-left: 70px;
   width: 500px;
   font-size: 62px;
   line-height: 100%;
   color: $title-table;
+
+  @media (max-width: $mobile-width-only) {
+    width: 344px;
+    font-weight: 700;
+    font-size: 28px;
+    order: 0;
+  }
 }
 
 .table__text {
+
+  &--first {
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    @media (max-width: $mobile-width-only) {
+      order: 1;
+    }
+  }
+
+  &--second {
+    @media (max-width: $mobile-width-only) {
+      order: 3;
+    }
+  }
+
   p{
+    margin: 0;
+    padding-left: 70px;
     width: 500px;
+
+    @media (max-width: $mobile-width-only) {
+      width: 296px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 170%;
   }
 }
 
 .table__button-box {
   display: flex;
+  position: absolute;
+  top: 375px;
+  left: 195px;
   justify-content: space-between;
   width: 474px;
+
+  button:active,
+  button:focus {
+    outline: 0 none;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    top: 138px;
+    left: 80px;
+    width: 144px;
+  }
 }
 
 .table__button {
@@ -56,4 +131,12 @@
   line-height: 170%;
   cursor: pointer;
   background-color: $button-color;
+
+  @media (max-width: $mobile-width-only) {
+    width: 61px;
+    height: 61px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 170%;
+  }
 }

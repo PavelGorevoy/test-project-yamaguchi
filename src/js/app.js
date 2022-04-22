@@ -11,6 +11,7 @@ class TableAnimation {
 
   addEventListener = () => {
     this.buttonUp.addEventListener('click', this.onButtonUpClick);
+    this.buttonDown.addEventListener('click', this.onButtonDownClick);
     this.tableTop.addEventListener('transitionend', () => this.isAnimation = false);
   }
 
@@ -21,6 +22,16 @@ class TableAnimation {
 
     this.isAnimation = true;
     this.tableTranslateY = this.tableTranslateY + this.tableTranslateStep;
+    this.tableTop.style.setProperty('--table-translate-y', `-${this.tableTranslateY}px` );
+  }
+
+  onButtonDownClick = () => {
+    if (this.tableTranslateY >= this.tableTranslateMax || this.isAnimation) {
+      return;
+    }
+
+    this.isAnimation = true;
+    this.tableTranslateY = this.tableTranslateY - this.tableTranslateStep;
     this.tableTop.style.setProperty('--table-translate-y', `-${this.tableTranslateY}px` );
   }
 
@@ -38,15 +49,14 @@ class TableAnimation {
       rootMargin: '0px',
       threshold: 0
     }
-    console.log(this.tableSection);
     const observer = new IntersectionObserver(this.onIntersection, options);
     observer.observe(this.tableSection);
   }
 
   init() {
     this.tableTranslateY = 0;
-    this.tableTranslateStep = 40;
-    this.tableTranslateMax = 160;
+    this.tableTranslateStep = 25;
+    this.tableTranslateMax = 100;
     this.isAnimation = false;
     this.tableSection = document.querySelector('.js-table');
     this.tableTop = document.querySelector ('.js-table-top');

@@ -1,14 +1,16 @@
 .voice {
+
   background: url("../../img/voice-background.svg") 100% 100% repeat $background-voice;
 }
 
 .voice__box {
   @include montserrat-fonts;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1733px;
+  max-width: 1920px;
   height: 920px;
   padding: 0 99px 0 99px;
 
@@ -29,7 +31,7 @@
   line-height: 124%;
 
   @media (max-width: $mobile-width-only) {
-    font-size: 34px;
+    font-size: 24px;
     line-height: 140%;
     width: 227px;
     height: 73px;
