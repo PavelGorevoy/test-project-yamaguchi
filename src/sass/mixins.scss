@@ -15,3 +15,9 @@
   line-height: 170%;
   color: #FFFFFF;
 }
+
+@mixin bebas_neue-fonts {
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}

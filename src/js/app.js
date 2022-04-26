@@ -75,7 +75,6 @@ class TableAnimation {
     this.tableTranslateStep = 25;
     this.tableTranslateStepMob = 5;
     this.tableTranslateMax = 100;
-    this.tableTranslateMaxMob = 10;
     this.isAnimation = false;
     this.tableSection = document.querySelector('.js-table');
     this.tableTop = document.querySelector ('.js-table-top');

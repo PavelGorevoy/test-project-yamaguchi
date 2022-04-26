@@ -17,3 +17,13 @@
     url("../fonts/montserrat.woff2") format("woff2"),
     url("../fonts/montserrat.woff") format("woff");
 }
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+          url("../fonts/bebas_neue.woff2") format("woff2"),
+          url("../fonts/bebas_neue.woff") format("woff");
+}
